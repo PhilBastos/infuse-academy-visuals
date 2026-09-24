@@ -58,20 +58,19 @@ def new_slide(bg, notes):
     return s
 
 
-TOOLS = ('Tools: built in code (HTML, SVG, Canvas) with Claude (Anthropic); '
+TOOLS = ('Tools: character generated in Magnific (slide 1); visuals built in code (HTML, SVG, Canvas) with Claude (Anthropic); '
          'typography Asap; INFUSE Academy palette. Animated version: see the live link.')
 
 # ---------- 01 ----------
 s = new_slide('png/01-clean.png', TOOLS)
-dash(s, 130, 122, ORANGE)
-text(s, 186, 112, 500, 30, [[run('01  FIRST STEP', 22, ORANGE, True, .22)]])
-text(s, 126, 172, 900, 430, [
+dash(s, 130, 100, ORANGE)
+text(s, 186, 90, 500, 30, [[run('01  FIRST STEP', 22, ORANGE, True, .22)]])
+text(s, 126, 150, 900, 430, [
     [run('No matter how', 104, NAVY, True, -.028)],
     [run('hard it looks,', 104, NAVY, True, -.028)],
     [run('there is always', 104, NAVY, True, -.028)],
     [run('a beginning.', 104, ORANGE, True, -.028)],
 ], lh=1.02)
-text(s, 130, 874, 400, 26, [[run('START HERE', 20, NAVY, True, .24)]])
 text(s, 130, 996, 500, 24, [[run('INFUSE Academy   ', 19, GREY, False, .04), run('01 / 03', 19, NAVY, True, .04)]])
 
 # ---------- 02 ----------
@@ -113,8 +112,8 @@ dash(s, 110, 94, ORANGE)
 text(s, 166, 84, 500, 30, [[run('04  PROCESS', 22, ORANGE, True, .22)]])
 text(s, 106, 124, 1000, 90, [[run('Tools & thinking', 72, NAVY, True, -.028)]], lh=1.1)
 cards = [
-    (110, 'A beginning', 'Claude (Anthropic) → HTML + SVG',
-     '“Hard” had to look genuinely overwhelming, so the knot is generated from hundreds of random loops and never looks tidy. Against that chaos, one orange thread does the only thing that matters: it leaves. The eye follows it to a single dot that says “start here”.'),
+    (110, 'A beginning', 'Magnific (character) + Claude → code',
+     'The character was generated with AI; the world around her is code. The knot is built from hundreds of random loops so “hard” looks genuinely overwhelming. One orange thread escapes the chaos and ends right at her fingertips: the beginning is always within reach.'),
     (690, 'The dark funnel', 'Claude (Anthropic) → HTML Canvas',
      'A statistic is easy to read and easy to forget, so the 61% becomes physical: buyers flow through a funnel and most of their journey happens in the dark. In the live version your cursor is a flashlight, so you literally have to go looking for them.'),
     (1270, 'The script', 'Claude (Anthropic) → HTML + SVG',
@@ -126,10 +125,7 @@ for x, title, tool, body in cards:
     text(s, x + 40, 410, 470, 30, [[run(tool, 22, NAVY, True)]])
     text(s, x + 40, 462, 460, 240, [[run(body, 21, '3A4A5C')]], lh=1.45, wrap=True)
 text(s, 158, 778, 300, 22, [[run('WHY AI', 16, MINT, True, .18)]])
-text(s, 158, 810, 1604, 110, [[run('I used Claude as a generative design partner: I set the concept, composition, palette and type, '
-                                   'and it wrote the code that renders each visual — a procedural knot, a particle funnel, an animated '
-                                   'storyboard. Code-generated art stays crisp at any size, animates for free and follows the brand '
-                                   'system exactly, which image generators still struggle with.', 24, WHITE)]], lh=1.42, wrap=True)
+text(s, 158, 810, 1604, 110, [[run('I generated the character in Magnific, using the INFUSE character sheet as the reference, because a human figure is where AI illustration shines and a flat, limited-palette prompt keeps it on brand. Everything around her — knot, thread, funnel, storyboard — is built in code with Claude, so it stays crisp, animates, and follows the palette exactly.', 24, WHITE)]], lh=1.42, wrap=True)
 
 prs.save('INFUSE-Academy-visuals.pptx')
 

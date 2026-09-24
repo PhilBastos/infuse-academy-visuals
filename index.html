@@ -17,7 +17,7 @@ body.clean .copy{visibility:hidden}
 body.export{background:none}
 body.export nav,body.export .hint{display:none!important}
 body.export *{animation:none!important}
-body.export #s1 .hl span,body.export #s1 .start,body.export #s3 .p{opacity:1}
+body.export #s1 .hl span,body.export #s1 .char,body.export #s3 .p{opacity:1}
 .meta{display:flex;align-items:center;gap:16px;font-size:22px;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
 .meta i{display:block;width:40px;height:4px;border-radius:2px;background:currentColor}
 @keyframes fade{from{opacity:0}to{opacity:1}}
@@ -26,16 +26,16 @@ body.export #s1 .hl span,body.export #s1 .start,body.export #s3 .p{opacity:1}
 /* ---------- 01 ---------- */
 #s1{background:#F8F7F3;color:#021A36;cursor:pointer}
 #s1 svg{left:0;top:0}
-#s1 .meta{left:130px;top:112px;color:#FF4F28}
-#s1 .hl{left:126px;top:172px;font-size:104px;line-height:1.02;font-weight:800;letter-spacing:-.028em}
+#s1 .meta{left:130px;top:90px;color:#FF4F28}
+#s1 .hl{left:126px;top:150px;font-size:104px;line-height:1.02;font-weight:800;letter-spacing:-.028em}
 #s1 .hl span{display:block;opacity:0}
 #s1.on .hl span{animation:up 1s cubic-bezier(.2,.7,.2,1) forwards}
 #s1.on .hl span:nth-child(2){animation-delay:.12s}
 #s1.on .hl span:nth-child(3){animation-delay:.24s}
 #s1.on .hl span.o{animation-delay:3.4s}
 #s1 .o{color:#FF4F28}
-#s1 .start{left:130px;top:874px;font-size:20px;font-weight:700;letter-spacing:.24em;opacity:0}
-#s1.on .start{animation:up .8s 3.9s forwards}
+#s1 .char{left:247px;top:590px;width:432px;opacity:0}
+#s1.on .char{animation:up 1s .3s cubic-bezier(.2,.7,.2,1) forwards}
 #s1 .foot{left:130px;bottom:62px;font-size:19px;font-weight:500;letter-spacing:.04em;color:#8993A0}
 #s1 .foot b{color:#021A36;font-weight:700;margin-left:12px}
 
@@ -117,7 +117,7 @@ nav span{min-width:64px;text-align:center}
   <svg id="art1" width="1920" height="1080" viewBox="0 0 1920 1080" aria-hidden="true"></svg>
   <div class="meta copy"><i></i>01 &nbsp;First step</div>
   <div class="hl copy"><span>No matter how</span><span>hard it looks,</span><span>there is always</span><span class="o">a beginning.</span></div>
-  <div class="start copy">START HERE</div>
+  <img class="char" src="assets/character.png" width="432" height="384" alt="">
   <div class="foot copy">INFUSE Academy<b>01 / 03</b></div>
 </section>
 
@@ -155,8 +155,8 @@ nav span{min-width:64px;text-align:center}
   <div class="card" style="left:110px"><div class="chip">01</div></div>
   <div class="ct copy" style="left:214px;top:306px">A beginning</div>
   <div class="tl copy" style="left:150px;top:384px">TOOL</div>
-  <div class="tv copy" style="left:150px;top:410px">Claude (Anthropic) → HTML + SVG</div>
-  <div class="cb copy" style="left:150px;top:462px">“Hard” had to look genuinely overwhelming, so the knot is generated from hundreds of random loops and never looks tidy. Against that chaos, one orange thread does the only thing that matters: it leaves. The eye follows it to a single dot that says “start here”.</div>
+  <div class="tv copy" style="left:150px;top:410px">Magnific (character) + Claude → code</div>
+  <div class="cb copy" style="left:150px;top:462px">The character was generated with AI; the world around her is code. The knot is built from hundreds of random loops so “hard” looks genuinely overwhelming. One orange thread escapes the chaos and ends right at her fingertips: the beginning is always within reach.</div>
   <div class="card" style="left:690px"><div class="chip">02</div></div>
   <div class="ct copy" style="left:794px;top:306px">The dark funnel</div>
   <div class="tl copy" style="left:730px;top:384px">TOOL</div>
@@ -169,7 +169,7 @@ nav span{min-width:64px;text-align:center}
   <div class="cb copy" style="left:1310px;top:462px">The story is about a gap too small to notice. Each panel shows the team drifting away from the platform while one line underneath shows why: a few degrees off on day one becomes a missed opportunity by month six. The panels darken as the story does.</div>
   <div class="ai"></div>
   <div class="al copy" style="left:158px;top:778px">WHY AI</div>
-  <div class="ab copy" style="left:158px;top:810px">I used Claude as a generative design partner: I set the concept, composition, palette and type, and it wrote the code that renders each visual — a procedural knot, a particle funnel, an animated storyboard. Code-generated art stays crisp at any size, animates for free and follows the brand system exactly, which image generators still struggle with.</div>
+  <div class="ab copy" style="left:158px;top:810px">I generated the character in Magnific, using the INFUSE character sheet as the reference, because a human figure is where AI illustration shines and a flat, limited-palette prompt keeps it on brand. Everything around her — knot, thread, funnel, storyboard — is built in code with Claude, so it stays crisp, animates, and follows the palette exactly.</div>
 </section>
 
 <nav aria-label="Slides">
@@ -207,14 +207,14 @@ function build1(){
   const g1=el('radialGradient',{id:'k1'},defs);el('stop',{offset:'0','stop-color':'#E1F2FA'},g1);el('stop',{offset:'1','stop-color':'#E1F2FA','stop-opacity':'0'},g1);
   const g2=el('radialGradient',{id:'k2'},defs);el('stop',{offset:'0','stop-color':'#FAFF81','stop-opacity':'.95'},g2);el('stop',{offset:'1','stop-color':'#FAFF81','stop-opacity':'0'},g2);
   el('circle',{cx,cy,r:620,fill:'url(#k1)'});
-  const glow=el('circle',{cx:150,cy:832,r:180,fill:'url(#k2)'});if(!EXPORT)glow.animate([{opacity:0},{opacity:1}],{duration:1400,delay:3500,fill:'both'});
+  const glow=el('circle',{cx:632,cy:660,r:150,fill:'url(#k2)'});if(!EXPORT)glow.animate([{opacity:0},{opacity:1}],{duration:1400,delay:3500,fill:'both'});
   draw(cr(walk(170,520,500,.12)),{stroke:'#021A36','stroke-width':1.6,opacity:.28},0,2300);
   draw(cr(walk(120,480,470,.18)),{stroke:'#021A36','stroke-width':3,opacity:.85},150,2300);
-  const t=walk(6,300,300,.2);t.unshift([cx+40,cy-20]);t.push([1090,610],[960,700],[780,812],[560,832],[340,832],[150,832]);
+  const t=walk(6,300,300,.2);t.unshift([cx+40,cy-20]);t.push([1060,640],[900,700],[760,702],[632,660]);
   draw(cr(t),{stroke:'#FF4F28','stroke-width':6},1900,1900);
   draw(cr(walk(44,440,430,.25)),{stroke:'#021A36','stroke-width':4.5},300,2300);
-  const ring=el('circle',{cx:150,cy:832,r:14,fill:'none',stroke:'#FF4F28','stroke-width':3});
-  const dot=el('circle',{cx:150,cy:832,r:14,fill:'#FF4F28'});
+  const ring=el('circle',{cx:632,cy:660,r:11,fill:'none',stroke:'#FF4F28','stroke-width':3});
+  const dot=el('circle',{cx:632,cy:660,r:11,fill:'#FF4F28'});
   for(const n of[ring,dot]){n.style.transformBox='fill-box';n.style.transformOrigin='center'}
   if(!EXPORT)dot.animate([{transform:'scale(0)'},{transform:'scale(1)'}],{duration:600,delay:3700,easing:'cubic-bezier(.3,1.7,.5,1)',fill:'both'});
   if(!EXPORT)ring.animate([{transform:'scale(1)',opacity:.8},{transform:'scale(3.4)',opacity:0}],{duration:1900,delay:4000,iterations:Infinity,easing:'ease-out',fill:'both'});
