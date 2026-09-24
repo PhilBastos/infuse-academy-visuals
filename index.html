@@ -86,6 +86,20 @@ body.export #s1 .hl span,body.export #s1 .start,body.export #s3 .p{opacity:1}
 @keyframes dr{to{transform:translate(var(--dx),var(--dy))}}
 @keyframes son{from{transform:scale(1);opacity:.8}to{transform:scale(2.8);opacity:0}}
 
+/* ---------- 04 · process ---------- */
+#s4{background:#F8F7F3;color:#021A36}
+#s4 .meta{left:110px;top:84px;color:#FF4F28}
+#s4 .hl{left:106px;top:124px;font-size:72px;font-weight:800;letter-spacing:-.028em}
+#s4 .card{position:absolute;top:262px;width:540px;height:440px;border-radius:32px;background:#fff;box-shadow:0 1px 0 rgba(2,26,54,.05),0 24px 48px -28px rgba(2,26,54,.3)}
+#s4 .chip{position:absolute;left:40px;top:40px;width:48px;height:48px;border-radius:50%;background:#021A36;color:#fff;display:grid;place-items:center;font-size:18px;font-weight:800}
+#s4 .ct{top:44px;font-size:32px;font-weight:800;letter-spacing:-.02em;white-space:nowrap}
+#s4 .tl{font-size:16px;font-weight:700;letter-spacing:.18em;color:#FF4F28}
+#s4 .tv{font-size:22px;font-weight:700}
+#s4 .cb{width:460px;font-size:21px;font-weight:500;line-height:1.45;color:#3A4A5C}
+#s4 .ai{left:110px;top:740px;width:1700px;height:210px;border-radius:32px;background:#021A36}
+#s4 .al{font-size:16px;font-weight:700;letter-spacing:.18em;color:#78FFD6}
+#s4 .ab{width:1604px;font-size:24px;font-weight:500;line-height:1.42;color:#fff}
+
 /* ---------- nav ---------- */
 nav{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);display:flex;align-items:center;gap:4px;padding:6px;border-radius:999px;background:rgba(2,26,54,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;font:700 14px/1 Asap,sans-serif;letter-spacing:.12em;opacity:.55;transition:opacity .2s;z-index:10}
 nav:hover,nav:focus-within{opacity:1}
@@ -132,6 +146,30 @@ nav span{min-width:64px;text-align:center}
   <div class="hl copy">A small gap at the start. <span>A missed opportunity at scale.</span></div>
   <div id="panels"></div>
   <svg class="band" id="band" width="1920" height="280" viewBox="0 0 1920 280" aria-hidden="true"></svg>
+</section>
+
+<!-- 04 · Tools & thinking -->
+<section class="slide" id="s4" aria-label="Tools and thinking behind the three visuals.">
+  <div class="meta copy"><i></i>04 &nbsp;Process</div>
+  <div class="hl copy">Tools &amp; thinking</div>
+  <div class="card" style="left:110px"><div class="chip">01</div></div>
+  <div class="ct copy" style="left:214px;top:306px">A beginning</div>
+  <div class="tl copy" style="left:150px;top:384px">TOOL</div>
+  <div class="tv copy" style="left:150px;top:410px">Claude (Anthropic) → HTML + SVG</div>
+  <div class="cb copy" style="left:150px;top:462px">“Hard” had to look genuinely overwhelming, so the knot is generated from hundreds of random loops and never looks tidy. Against that chaos, one orange thread does the only thing that matters: it leaves. The eye follows it to a single dot that says “start here”.</div>
+  <div class="card" style="left:690px"><div class="chip">02</div></div>
+  <div class="ct copy" style="left:794px;top:306px">The dark funnel</div>
+  <div class="tl copy" style="left:730px;top:384px">TOOL</div>
+  <div class="tv copy" style="left:730px;top:410px">Claude (Anthropic) → HTML Canvas</div>
+  <div class="cb copy" style="left:730px;top:462px">A statistic is easy to read and easy to forget, so the 61% becomes physical: buyers flow through a funnel and most of their journey happens in the dark. In the live version your cursor is a flashlight, so you literally have to go looking for them.</div>
+  <div class="card" style="left:1270px"><div class="chip">03</div></div>
+  <div class="ct copy" style="left:1374px;top:306px">The script</div>
+  <div class="tl copy" style="left:1310px;top:384px">TOOL</div>
+  <div class="tv copy" style="left:1310px;top:410px">Claude (Anthropic) → HTML + SVG</div>
+  <div class="cb copy" style="left:1310px;top:462px">The story is about a gap too small to notice. Each panel shows the team drifting away from the platform while one line underneath shows why: a few degrees off on day one becomes a missed opportunity by month six. The panels darken as the story does.</div>
+  <div class="ai"></div>
+  <div class="al copy" style="left:158px;top:778px">WHY AI</div>
+  <div class="ab copy" style="left:158px;top:810px">I used Claude as a generative design partner: I set the concept, composition, palette and type, and it wrote the code that renders each visual — a procedural knot, a particle funnel, an animated storyboard. Code-generated art stays crisp at any size, animates for free and follows the brand system exactly, which image generators still struggle with.</div>
 </section>
 
 <nav aria-label="Slides">

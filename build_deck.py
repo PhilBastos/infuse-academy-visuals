@@ -107,9 +107,33 @@ for x, big, big_c, sub_c, ink, cap in panels:
     text(s, x + 36, 580, 500, 106, [[run(big, 104, big_c, True, -.04), run('  team adoption', 22, sub_c)]], lh=1.0)
     text(s, x + 36, 698, 488, 70, [[run(cap, 25, ink)]], lh=1.3, wrap=True)
 
+# ---------- 04 · process ----------
+s = new_slide('png/04-clean.png', 'Process slide: tools used per visual and why AI.')
+dash(s, 110, 94, ORANGE)
+text(s, 166, 84, 500, 30, [[run('04  PROCESS', 22, ORANGE, True, .22)]])
+text(s, 106, 124, 1000, 90, [[run('Tools & thinking', 72, NAVY, True, -.028)]], lh=1.1)
+cards = [
+    (110, 'A beginning', 'Claude (Anthropic) → HTML + SVG',
+     '“Hard” had to look genuinely overwhelming, so the knot is generated from hundreds of random loops and never looks tidy. Against that chaos, one orange thread does the only thing that matters: it leaves. The eye follows it to a single dot that says “start here”.'),
+    (690, 'The dark funnel', 'Claude (Anthropic) → HTML Canvas',
+     'A statistic is easy to read and easy to forget, so the 61% becomes physical: buyers flow through a funnel and most of their journey happens in the dark. In the live version your cursor is a flashlight, so you literally have to go looking for them.'),
+    (1270, 'The script', 'Claude (Anthropic) → HTML + SVG',
+     'The story is about a gap too small to notice. Each panel shows the team drifting away from the platform while one line underneath shows why: a few degrees off on day one becomes a missed opportunity by month six. The panels darken as the story does.'),
+]
+for x, title, tool, body in cards:
+    text(s, x + 104, 306, 420, 44, [[run(title, 32, NAVY, True, -.02)]])
+    text(s, x + 40, 384, 300, 22, [[run('TOOL', 16, ORANGE, True, .18)]])
+    text(s, x + 40, 410, 470, 30, [[run(tool, 22, NAVY, True)]])
+    text(s, x + 40, 462, 460, 240, [[run(body, 21, '3A4A5C')]], lh=1.45, wrap=True)
+text(s, 158, 778, 300, 22, [[run('WHY AI', 16, MINT, True, .18)]])
+text(s, 158, 810, 1604, 110, [[run('I used Claude as a generative design partner: I set the concept, composition, palette and type, '
+                                   'and it wrote the code that renders each visual — a procedural knot, a particle funnel, an animated '
+                                   'storyboard. Code-generated art stays crisp at any size, animates for free and follows the brand '
+                                   'system exactly, which image generators still struggle with.', 24, WHITE)]], lh=1.42, wrap=True)
+
 prs.save('INFUSE-Academy-visuals.pptx')
 
 # PDF of the finished slides (text baked in) for the PDF submission route.
-imgs = [Image.open(f'png/0{i}-full.png').convert('RGB') for i in (1, 2, 3)]
+imgs = [Image.open(f'png/0{i}-full.png').convert('RGB') for i in (1, 2, 3, 4)]
 imgs[0].save('INFUSE-Academy-visuals.pdf', save_all=True, append_images=imgs[1:], resolution=144)
 print('ok')
