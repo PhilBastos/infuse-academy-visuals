@@ -71,7 +71,7 @@ text(s, 126, 150, 900, 430, [
     [run('there is always', 104, NAVY, True, -.028)],
     [run('a beginning.', 104, ORANGE, True, -.028)],
 ], lh=1.02)
-text(s, 130, 996, 500, 24, [[run('INFUSE Academy   ', 19, GREY, False, .04), run('01 / 03', 19, NAVY, True, .04)]])
+text(s, 130, 1018, 500, 24, [[run('INFUSE Academy   ', 19, GREY, False, .04), run('01 / 03', 19, NAVY, True, .04)]])
 
 # ---------- 02 ----------
 s = new_slide('png/02-clean.png', TOOLS)
